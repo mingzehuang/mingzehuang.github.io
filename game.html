@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>ECON 459 Games and Economic Behavior</title>
+
+<script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Mingze (Rico) Huang</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="research.html">Research</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Teaching
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="game.html">Game Theory</a>
+    </li>
+    <li>
+      <a href="https://mingzehuang.github.io/ECON410_Macroeconomic_Theory/">Macroeconomic Theory</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    About Me
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://drive.google.com/file/d/1zQ_kB4DZ4Xo71y74t_EIRraYTJAXscpC/view?usp=sharing">Resume</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Contact
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://github.com/mingzehuang">
+        <span class="fa fa-at"></span>
+         
+        Github
+      </a>
+    </li>
+    <li>
+      <a href="mailto: mingzehuang@gmail.com">
+        <span class="fa fa-envelope"></span>
+         
+        Email
+      </a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">ECON 459 Games and Economic Behavior</h1>
+
+</div>
+
+
+<div id="section" class="section level2 tabset">
+<h2 class="tabset"></h2>
+<div id="lecture-notes" class="section level3">
+<h3>Lecture Notes</h3>
+<style>
+  .col2 {
+    columns: 2 300px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 300px; /* chrome, safari */
+    -moz-columns: 2 300px;    /* firefox */
+  }
+  .col3 {
+    columns: 3 100px;
+    -webkit-columns: 3 100px;
+    -moz-columns: 3 100px;
+  }
+</style>
+<div class="col3">
+<ul>
+<li><a href="https://drive.google.com/file/d/14I2DHJEov-eMRZ9vLgOcNCjkQ8bFtd6D/view?usp=sharing">Syllabus</a></li>
+<li><a href="https://drive.google.com/file/d/1c7mZm9SpeCnO4KgiuFDLjWlTEw864SUv/view?usp=sharing">Lecture 1</a></li>
+<li><a href="https://drive.google.com/file/d/1n5WzDqs5MNOCnHi5OML-Ma1sAAODr9gy/view?usp=sharing">Lecture 2</a></li>
+<li><a href="https://drive.google.com/file/d/1XhHpmvMWl0PmWVU3vSIlJr4Q_BuTe5QD/view?usp=sharing">Lecture 3</a></li>
+<li><a href="https://drive.google.com/file/d/18Wp4VoW6Pf3WluFds3lD3qNEaMr5jfKo/view?usp=sharing">Lecture 4</a></li>
+<li><a href="https://drive.google.com/file/d/1xryZC5_FLRlzP-joSOt-fmP3jkyHXkRV/view?usp=sharing">Lecture 5</a></li>
+<li><a href="https://drive.google.com/file/d/18HnVUVu5DbnPWOjwF3sh7Mr_APuQTRgf/view?usp=sharing">Lecture 6</a></li>
+<li><a href="https://drive.google.com/file/d/1a-FhTHvzXncYEbCsrIDPvshPeAWLqQsv/view?usp=sharing">Lecture 7</a></li>
+<li><a href="https://drive.google.com/file/d/1c_TIc0oXnDAayAA3iaW8OSDW8SWsyQk6/view?usp=sharing">Lecture 8</a></li>
+<li><a href="https://drive.google.com/file/d/1Vwqj-0HFytTxGyjNnIVY22GU8GJ_Iw1h/view?usp=sharing">Lecture 9</a></li>
+<li><a href="https://drive.google.com/file/d/1iBpnV2jybb4fClwqNflKUaGbebjtESud/view?usp=sharing">Lecture 10</a></li>
+<li><a href="https://drive.google.com/file/d/109suJ1C267Q6pGdNQzn_ZjJhYqBltdgH/view?usp=sharing">Lecture 11</a></li>
+<li><a href="https://drive.google.com/file/d/1Z9iHwHXfVoMUjZ8WycZ5EWylo9P7dx6Z/view?usp=sharing">Lecture 12</a></li>
+<li><a href="https://drive.google.com/file/d/1kNcgHYJs2K5fvS2WRZmOVghliWvLS4c4/view?usp=sharing">Lecture 13</a></li>
+<li><a href="https://drive.google.com/file/d/1TIV1vtHqjpI5CFBzFh9uCC-hSnDy_iDv/view?usp=sharing">Lecture 14</a></li>
+<li><a href="https://drive.google.com/file/d/1g3VFFq_gKiCS9mpwonrja7kq_yfhyM4O/view?usp=sharing">Lecture 15</a></li>
+<li><a href="https://drive.google.com/file/d/1ZMWCEmQ33uZHdRhyIKrf-o3CRndOnoHR/view?usp=sharing">Lecture 16</a></li>
+<li><a href="https://drive.google.com/file/d/1rsOetLhiLEZGHFWFlmdZb8pvUlA9cpBo/view?usp=sharing">Lecture 17</a></li>
+<li><a href="https://drive.google.com/file/d/1nywqjF4qYleLdvWUK9H23EXZHGB8hUJ-/view?usp=sharing">Lecture 18</a></li>
+<li><a href="https://drive.google.com/file/d/1eNBfkceiKlOd18Wk55pq6ehiQ00gt8XC/view?usp=sharing">Lecture 19</a></li>
+<li><a href="https://drive.google.com/file/d/1t8jCyeprjPAvdbsv1m08o4bX5K_sdeFm/view?usp=sharing">Lecture 20</a></li>
+<li><a href="https://drive.google.com/file/d/143vFP9sxvLbe-fGK0d5Aa1ex18Q4qkMV/view?usp=sharing">Lecture 21</a></li>
+<li><a href="https://drive.google.com/file/d/16uABRBLipB9iJ-s8OJZObsPjI0-6uZ11/view?usp=sharing">Lecture 22</a></li>
+<li><a href="https://drive.google.com/file/d/1KUVHHeaUhsWopD2H8Tfh2MDXx0xxj4lB/view?usp=sharing">Lecture 23</a></li>
+</ul>
+</div>
+</div>
+<div id="homework" class="section level3">
+<h3>Homework</h3>
+<style>
+  .col2 {
+    columns: 2 300px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 300px; /* chrome, safari */
+    -moz-columns: 2 300px;    /* firefox */
+  }
+  .col3 {
+    columns: 3 100px;
+    -webkit-columns: 3 100px;
+    -moz-columns: 3 100px;
+  }
+</style>
+<div class="col2">
+<ul>
+<li><a href="https://drive.google.com/file/d/1MYzPtFwr_hHtneNUX1uHli4-qXyo5VKP/view?usp=sharing">Assignment 3 Key</a></li>
+<li><a href="https://drive.google.com/file/d/1R6wojAjZZn8fD_Cju7q0dNGU5QBwDVWC/view?usp=sharing">Assignment 4 Key</a></li>
+<li><a href="https://drive.google.com/file/d/1AQivQCRMC-9ai6y6U7cyXT0-wxdmB1Jb/view?usp=sharing">Assignment 5 Key</a></li>
+<li><a href="https://drive.google.com/file/d/1b4op1XiUL-pHpVtVg8l5bqIJX99SVdRd/view?usp=sharing">Assignment 6 Key</a></li>
+<li><a href="https://drive.google.com/file/d/132M6e0cNbiNN6RxY9W3SOTa380qAh9vf/view?usp=sharing">Assignment 7 Key</a></li>
+<li><a href="https://drive.google.com/file/d/1163zIA6A9DsvYL2XqR8vaF1gv06-Us_T/view?usp=sharing">Assignment 8 Key</a></li>
+<li><a href="https://drive.google.com/file/d/1RRv6GA1a31h_hpCDAarPasdQmJek1l2P/view?usp=sharing">Assignment 9 Key</a></li>
+<li><a href="https://drive.google.com/file/d/1zy5taYc0zgbkRGihh4Yb5ggFG9l60Txg/view?usp=sharing">Assignment 10 Key</a></li>
+</ul>
+</div>
+</div>
+<div id="quiz" class="section level3">
+<h3>Quiz</h3>
+<ul>
+<li><a href="https://drive.google.com/file/d/1QidDSdp7xvXMNs6-32GVvnEbc0ZDlARJ/view?usp=sharing">Quiz 1 Key</a></li>
+<li><a href="https://drive.google.com/file/d/1rOKR10YjXR98lJv_h6-6gJxQ957bTZlO/view?usp=sharing">Quiz 2 Key</a></li>
+<li><a href="https://drive.google.com/file/d/1dKTjB4vJvFIxQcNwJJavWkeQlnbGi0iw/view?usp=sharing">Quiz 3 Key</a></li>
+<li><a href="https://drive.google.com/file/d/1-2U-pWpHOyeRcfPkFVGJoWEYc6l8w0c1/view?usp=sharing">Quiz 4 Key</a></li>
+<li><a href="https://drive.google.com/file/d/1HwqYcQNlOgGmCPgCfzGCMzH3EcLPfAW1/view?usp=sharing">Quiz 5 Key</a></li>
+</ul>
+</div>
+<div id="exam-and-term-project" class="section level3">
+<h3>Exam and Term Project</h3>
+<ul>
+<li><a href="https://drive.google.com/file/d/176RZQ6KuW_wSNXIS3Q8Gz67_M3F_V7gB/view?usp=sharing">Exam 1 Key</a></li>
+<li><a href="https://drive.google.com/file/d/1hklz1c5zK_gZEN6vlEd0z6MmtZSRGhhB/view?usp=sharing">Term Project</a></li>
+</ul>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
