@@ -13,7 +13,7 @@
 
 <title>index.knit</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -60,6 +60,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -80,6 +81,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -232,7 +236,7 @@ $(document).ready(function () {
 <div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -257,7 +261,7 @@ $(document).ready(function () {
   <a href="service.html">Services</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Teaching
      
     <span class="caret"></span>
@@ -306,21 +310,118 @@ $(document).ready(function () {
 <p>
 <img src="images/me.JPG" style = "width:15%; margin-right: 20px" align = "left">
 </p>
-<p><a href="https://twitter.com/mingze_rico"><img src="https://img.shields.io/badge/twitter-%40mingze__rico-blue" alt="Twitter" /></a> <a href="https://github.com/mingzehuang"><img src="https://img.shields.io/badge/github-%40mingzehuang-brightgreen" alt="GitHub" /></a> <a href="mailto:mingzehuang@gmail.com"><img src="https://img.shields.io/badge/email-mingzehuang%40gmail.com-green" alt="Email" /></a> <a href="https://www.linkedin.com/in/mingze-rico-huang-a7986b21a/"><img src="https://img.shields.io/badge/linkedin-Mingze%20(Rico)%20Huang-blue" alt="Linkedin" /></a> <a href="https://scholar.google.com/citations?user=gyAzwucAAAAJ&amp;hl=en&amp;oi=ao"><img src="https://img.shields.io/badge/GoogleScholar-Mingze%20Huang-rainbow" alt="Google Scholar" /></a> <a href="https://www.researchgate.net/profile/Mingze-Huang-2"><img src="https://img.shields.io/badge/ReserchGate-Mingze%20Huang-green" alt="ResarchGate" /></a> <a href="https://www.kaggle.com/mingzericohuang"><img src="https://img.shields.io/badge/Kaggle-Mingze%20(Rico)%20Huang-lightblue" alt="Kaggle" /></a></p>
+<p><a href="https://twitter.com/mingze_rico"><img
+src="https://img.shields.io/badge/twitter-%40mingze__rico-blue"
+alt="Twitter" /></a> <a href="https://github.com/mingzehuang"><img
+src="https://img.shields.io/badge/github-%40mingzehuang-brightgreen"
+alt="GitHub" /></a> <a href="mailto:mingzehuang@gmail.com"><img
+src="https://img.shields.io/badge/email-mingzehuang%40gmail.com-green"
+alt="Email" /></a> <a
+href="https://www.linkedin.com/in/mingze-rico-huang-a7986b21a/"><img
+src="https://img.shields.io/badge/linkedin-Mingze%20(Rico)%20Huang-blue"
+alt="Linkedin" /></a> <a
+href="https://scholar.google.com/citations?user=gyAzwucAAAAJ&amp;hl=en&amp;oi=ao"><img
+src="https://img.shields.io/badge/GoogleScholar-Mingze%20Huang-rainbow"
+alt="Google Scholar" /></a> <a
+href="https://www.researchgate.net/profile/Mingze-Huang-2"><img
+src="https://img.shields.io/badge/ReserchGate-Mingze%20Huang-green"
+alt="ResarchGate" /></a></p>
 <div itemscope="" itemtype="https://schema.org/Person">
 <a itemprop="sameAs" content="https://orcid.org/0000-0003-3919-1564" href="https://orcid.org/0000-0003-3919-1564" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0003-3919-1564</a>
 </div>
-<p><em>I’m doing Computational Statistics, Package Development for R, Python and Julia, Machine Learning (Classic and Deep Learning), Parallel Computing on HPRC, Bioinformatics, Crypto Mining</em></p>
+<p><em>I’m doing Computational Statistics, Package Development for R and
+Python, Machine Learning (Classic and Deep Learning), Parallel Computing
+on HPRC, Bioinformatics</em></p>
 <hr />
 <ul>
-<li><img src="https://img.shields.io/badge/NEWS-1%2F07%2F2022-brightgreen" alt="News" /> Test version of Python package: <em>latentcor(v0.1.3)</em> by Mingze Huang, Christian L. Müller, Irina Gaynanova available on <a href="https://test.pypi.org/project/latentcor/"><em>Test PyPI</em></a> Stay tuned! Formal version is coming soon 🌈🌈🌈</li>
-<li><img src="https://img.shields.io/badge/NEWS-11%2F01%2F2021-brightgreen" alt="News" /> New version of R package: <em>latentcor(v1.2.0)</em> by Mingze Huang, Grace Yoon, Christian L. Müller, Irina Gaynanova available on <a href="https://CRAN.R-project.org/package=latentcor"><em>CRAN</em></a> 🌈🌈🌈</li>
-<li><img src="https://img.shields.io/badge/NEWS-09%2F21%2F2021-brightgreen" alt="News" /> <em>latentcor: An R Package for estimating latent correlations from mixed data types</em> by Mingze Huang, Christian L. Müller, Irina Gaynanova published on <a href="https://joss.theoj.org/papers/10.21105/joss.03634"><em>Journal of Open Source Software</em></a> 🌈🌈🌈</li>
-<li><img src="https://img.shields.io/badge/NEWS-08%2F26%2F2021-brightgreen" alt="News" /> New R package: <em>latentcor(v1.0.0)</em> by Mingze Huang, Grace Yoon, Christian L. Müller, Irina Gaynanova available on <a href="https://CRAN.R-project.org/package=latentcor"><em>CRAN</em></a> 🌈🌈🌈</li>
-<li><img src="https://img.shields.io/badge/MEDIA-08%2F20%2F2021-brightgreen" alt="Media Coverage" /> latentcor: An R Package for estimating latent correlations from mixed data types. by Mingze Huang, Christian L. Müller, Irina Gaynanova on <a href="https://www.newsbreak.com/news/2348863335897/latentcor-an-r-package-for-estimating-latent-correlations-from-mixed-data-types">NEWSBREAK</a> 🌈🌈🌈</li>
+<li><p><img
+src="https://img.shields.io/badge/NEWS-08%2F22%2F2022-brightgreen"
+alt="News" /> New version of Python package: <em>latentcor(v0.2.3)</em>
+by Mingze Huang, Christian L. Müller, Irina Gaynanova available on <a
+href="https://pypi.org/project/latentcor/"><em>PyPI</em></a>
+🌈🌈🌈</p></li>
+<li><p><img
+src="https://img.shields.io/badge/NEWS-08%2F09%2F2022-brightgreen"
+alt="News" /> New version of R package: <em>latentcor(v2.0.0)</em> by
+Mingze Huang, Grace Yoon, Christian L. Müller, Irina Gaynanova available
+on <a
+href="https://CRAN.R-project.org/package=latentcor"><em>CRAN</em></a>
+🌈🌈🌈</p></li>
+<li><p><img
+src="https://img.shields.io/badge/NEWS-05%2F23%2F2022-brightgreen"
+alt="News" /> Formal version of Python package:
+<em>latentcor(v0.1.4)</em> by Mingze Huang, Christian L. Müller, Irina
+Gaynanova available on <a
+href="https://pypi.org/project/latentcor/"><em>PyPI</em></a>
+🌈🌈🌈</p></li>
+<li><p><img
+src="https://img.shields.io/badge/NEWS-1%2F07%2F2022-brightgreen"
+alt="News" /> Test version of Python package: <em>latentcor(v0.1.3)</em>
+by Mingze Huang, Christian L. Müller, Irina Gaynanova available on <a
+href="https://test.pypi.org/project/latentcor/"><em>Test PyPI</em></a>
+Stay tuned! Formal version is coming soon 🌈🌈🌈</p></li>
+<li><p><img
+src="https://img.shields.io/badge/NEWS-11%2F01%2F2021-brightgreen"
+alt="News" /> New version of R package: <em>latentcor(v1.2.0)</em> by
+Mingze Huang, Grace Yoon, Christian L. Müller, Irina Gaynanova available
+on <a
+href="https://CRAN.R-project.org/package=latentcor"><em>CRAN</em></a>
+🌈🌈🌈</p></li>
+<li><p><img
+src="https://img.shields.io/badge/NEWS-09%2F21%2F2021-brightgreen"
+alt="News" /> <em>latentcor: An R Package for estimating latent
+correlations from mixed data types</em> by Mingze Huang, Christian L.
+Müller, Irina Gaynanova published on <a
+href="https://joss.theoj.org/papers/10.21105/joss.03634"><em>Journal of
+Open Source Software</em></a> 🌈🌈🌈</p></li>
+<li><p><img
+src="https://img.shields.io/badge/NEWS-08%2F26%2F2021-brightgreen"
+alt="News" /> New R package: <em>latentcor(v1.0.0)</em> by Mingze Huang,
+Grace Yoon, Christian L. Müller, Irina Gaynanova available on <a
+href="https://CRAN.R-project.org/package=latentcor"><em>CRAN</em></a>
+🌈🌈🌈</p></li>
+<li><p><img
+src="https://img.shields.io/badge/MEDIA-08%2F20%2F2021-brightgreen"
+alt="Media Coverage" /> latentcor: An R Package for estimating latent
+correlations from mixed data types. by Mingze Huang, Christian L.
+Müller, Irina Gaynanova on <a
+href="https://www.newsbreak.com/news/2348863335897/latentcor-an-r-package-for-estimating-latent-correlations-from-mixed-data-types">NEWSBREAK</a>
+🌈🌈🌈</p></li>
 </ul>
 <hr />
-<p><img src="https://img.shields.io/badge/Bash-000000?style=flat&amp;logo=gnu&amp;logoColor=white" alt="Bash" /> <img src="https://img.shields.io/badge/Ubuntu-E95420??style=flat&amp;logo=ubuntu&amp;logoColor=white" alt="Ubuntu" /> <img src="https://img.shields.io/badge/R-276DC3??style=flat&amp;logo=r&amp;logoColor=white" alt="R" /> <img src="https://img.shields.io/badge/Python-14354C?style=flat&amp;logo=python&amp;logoColor=white" alt="Python" /> <img src="https://img.shields.io/badge/-Julia-9558B2?style=flat&amp;logo=julia&amp;logoColor=white" alt="Julia" /> <img src="https://img.shields.io/badge/C-00599C??style=flat&amp;logo=c&amp;logoColor=white" alt="C" /> <img src="https://img.shields.io/badge/MySQL-00000F??style=flat&amp;logo=mysql&amp;logoColor=white" alt="mySQL" /> <img src="https://img.shields.io/badge/Amazon_AWS-232F3E??style=flat&amp;logo=amazon-aws&amp;logoColor=white" alt="AWS" /> <img src="https://img.shields.io/badge/Google_Cloud-4285F4??style=flat&amp;logo=google-cloud&amp;logoColor=white" alt="Google Cloud" /> <img src="https://img.shields.io/badge/Microsoft_Azure-0089D6??style=flat&amp;logo=microsoft-azure&amp;logoColor=white" alt="Azure" /> <img src="https://img.shields.io/badge/Keras-%23D00000.svg?style=flat&amp;logo=Keras&amp;logoColor=white" alt="Keras" /> <img src="https://img.shields.io/badge/numpy-%23013243.svg?style=flat&amp;logo=numpy&amp;logoColor=white" alt="NumPy" /> <img src="https://img.shields.io/badge/SciPy-%230C55A5.svg?style=flat&amp;logo=scipy&amp;logoColor=white" alt="SciPy" /> <img src="https://img.shields.io/badge/pandas-%23150458.svg?style=flat&amp;logo=pandas&amp;logoColor=white" alt="Pandas" /> <img src="https://img.shields.io/badge/Plotly-%233F4F75.svg?style=flat&amp;logo=plotly&amp;logoColor=white" alt="Plotly" /> <img src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=flat&amp;logo=scikit-learn&amp;logoColor=white" alt="scikit-learn" /> <img src="https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=flat&amp;logo=TensorFlow&amp;logoColor=white" alt="TensorFlow" /></p>
+<p><img
+src="https://img.shields.io/badge/Bash-000000?style=flat&amp;logo=gnu&amp;logoColor=white"
+alt="Bash" /> <img
+src="https://img.shields.io/badge/github-%23121011.svg?style=flat&amp;logo=github&amp;logoColor=white"
+alt="GitHub" /> <img
+src="https://img.shields.io/badge/Ubuntu-E95420??style=flat&amp;logo=ubuntu&amp;logoColor=white"
+alt="Ubuntu" /> <img
+src="https://img.shields.io/badge/R-276DC3??style=flat&amp;logo=r&amp;logoColor=white"
+alt="R" /> <img
+src="https://img.shields.io/badge/Python-14354C?style=flat&amp;logo=python&amp;logoColor=white"
+alt="Python" /> <img
+src="https://img.shields.io/badge/C-00599C??style=flat&amp;logo=c&amp;logoColor=white"
+alt="C" /> <img
+src="https://img.shields.io/badge/MySQL-00000F??style=flat&amp;logo=mysql&amp;logoColor=white"
+alt="mySQL" /> <img
+src="https://img.shields.io/badge/Amazon_AWS-232F3E??style=flat&amp;logo=amazon-aws&amp;logoColor=white"
+alt="AWS" /> <img
+src="https://img.shields.io/badge/Microsoft_Azure-0089D6??style=flat&amp;logo=microsoft-azure&amp;logoColor=white"
+alt="Azure" /> <img
+src="https://img.shields.io/badge/Keras-%23D00000.svg?style=flat&amp;logo=Keras&amp;logoColor=white"
+alt="Keras" /> <img
+src="https://img.shields.io/badge/numpy-%23013243.svg?style=flat&amp;logo=numpy&amp;logoColor=white"
+alt="NumPy" /> <img
+src="https://img.shields.io/badge/SciPy-%230C55A5.svg?style=flat&amp;logo=scipy&amp;logoColor=white"
+alt="SciPy" /> <img
+src="https://img.shields.io/badge/pandas-%23150458.svg?style=flat&amp;logo=pandas&amp;logoColor=white"
+alt="Pandas" /> <img
+src="https://img.shields.io/badge/Plotly-%233F4F75.svg?style=flat&amp;logo=plotly&amp;logoColor=white"
+alt="Plotly" /> <img
+src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=flat&amp;logo=scikit-learn&amp;logoColor=white"
+alt="scikit-learn" /> <img
+src="https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=flat&amp;logo=TensorFlow&amp;logoColor=white"
+alt="TensorFlow" /></p>
 
 
 
